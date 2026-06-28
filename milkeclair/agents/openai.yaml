@@ -1,0 +1,5 @@
+interface:
+  display_name: 'milkeclair'
+  short_description: '推測修正と依頼外変更を防ぎ安全に実装するプロトコル'
+policy:
+  allow_implicit_invocation: true

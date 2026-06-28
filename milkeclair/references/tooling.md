@@ -1,0 +1,39 @@
+# ツール運用
+
+このreferenceを読むときは、このファイルだけで判断せず、関連するreferencesも必ず読むこと。
+個別リポジトリのツール規約がある場合は`references/<repo>/`も必ず読む。
+
+## shell
+
+- WSL repoではWSL側で実行する。
+- repoがinteractive zshを要求する場合は`zsh -ic`を使う。
+- クオートが複雑な一括置換は避け、小さく分ける。
+- `path`、`status`、`commands`などzsh特殊変数名をlocal変数に使わない。
+
+## 検索
+
+- スレッド読み返しのような要求では、検索で済ませず先頭から全て読む。
+
+## ファイル編集
+
+- 生成ツールがある場合は優先する。
+- 手作業編集は小さな単位に分ける。
+- untrackedは`git diff`に出ないことを前提に確認する。
+
+## サンドボックス
+
+- CLI(ghなど)を使用する際は、サンドボックス外で使用する。
+- サンドボックスではネットワークアクセスや認証ができない。
+
+## ツール一覧
+
+基本的なワークスペースにおけるツールは以下の通り。
+
+- js
+  - bun
+- ruby
+  - mise
+- package
+  - brew
+- environment
+  - docker, docker compose, mise
